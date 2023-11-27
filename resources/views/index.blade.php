@@ -15,6 +15,12 @@
 
 	@section('konten')
 
+	<p>Cari Data Pegawai :</p>
+    <form action="/pegawai/cari" method="GET">
+        <input class="form-control" type="text" name="cari" placeholder="Cari Pegawai berdasarkan nama .." value="{{ old('cari') }}">
+        <input class="btn btn-primary" type="submit" value="CARI">
+    </form>
+
 	<table border="1">
 		<table class = "table table striped table-hover">
 		<tr>
