@@ -2,18 +2,13 @@
 @extends('master2')
 @section('title', 'Database Pegawai')
 
-@section('judul_halaman')
+@section('konten')
 
 	<h2>www.malasngoding.com</h2>
 	<h3>Data Pegawai</h3>
  
 	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-	
-	<br/>
-	<br/>
-	@endsection
 
-	@section('konten')
 
 	<p>Cari Data Pegawai :</p>
     <form action="/pegawai/cari" method="GET">
@@ -37,7 +32,7 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-success">View</a>
+				<a href="/pegawai/lihat/{{ $p->pegawai_id }}" class="btn btn-success">View</a>
 				|
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning">Edit</a>
 				|

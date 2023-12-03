@@ -17,6 +17,16 @@ class PegawaiController extends Controller
 		return view('index',['pegawai' => $pegawai]);
  
 	}
+
+	public function viewPegawai($id)
+	{
+    	// mengambil data dari table pegawai
+		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+ 
+    	// mengirim data pegawai ke view index
+		return view('lihat',['pegawai' => $pegawai]);
+ 
+	}
  
 	// method untuk menampilkan view form tambah pegawai
 	public function tambah()
