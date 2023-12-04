@@ -1,4 +1,4 @@
-@extends('master')
+@extends('master2')
 @section('title', 'View Data Pegawai')
 
 @section('konten')
@@ -8,16 +8,23 @@
 <div class="container">
   <div class="row">
     <div class="col border-right">
-      Box Kosong
+      <li>Nama</li>
+      <li>Jabatan</li>
+      <li>Umur</li>
+      <li>Alamat</li>
     </div>
     <div class="col">
-    <ul>
-        <li>{{ $p->pegawai_nama }}</li>
-        <li>{{ $p->pegawai_jabatan }}</li>
-        <li>{{ $p->pegawai_umur }}</li>
-        <li>{{ $p->pegawai_alamat }}</li>
-    </ul>
+    <div>
+        <div>{{ $p->pegawai_nama }}</div>
+        <div>{{ $p->pegawai_jabatan }}</div>
+        <div>{{ $p->pegawai_umur }}</div>
+        <div>{{ $p->pegawai_alamat }}</div>
+</div>
     </div>
 @endforeach
+
+<div class="text-center mt-3">
+    <a href="/pegawai" class="btn btn-secondary btn-sm">Kembali</a>
+</div>
 
 @endsection

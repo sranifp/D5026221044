@@ -58,8 +58,8 @@
     <!-- bagian konten blog -->
 	@yield('konten')
 
-
-    @include('footer')
+  
+  @include('footer')
 </div>
 
 </body>

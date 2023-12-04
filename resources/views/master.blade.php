@@ -16,7 +16,7 @@
  
 </body>
 
-<body>
+<!-- <body>
 <div class="container">
     <header>
     <h2>Blog Sintiarani Febyan Putri</h2>
@@ -30,7 +30,7 @@
 	</header>
     <hr/>
 	<br/>
-	<br/>
+	<br/> -->
  
 	<!-- bagian judul halaman blog -->
 	<h3> @yield('judul_halaman') </h3>
@@ -41,9 +41,9 @@
 <br/>
 	<br/>
 	<hr/>
-	<footer>
+	<!-- <footer>
 		<p>&copy; <a href="https://www.malasngoding.com">www.malasngoding.com</a>. 2018 - 2019</p>
-	</footer>
+	</footer> -->
 
 @yield('isihalaman')
 
@@ -54,9 +54,9 @@
  <br/>
  <br/>
  <hr/>
- <footer>
+ <!-- <footer>
      <p>&copy; <a href="https://www.malasngoding.com">www.malasngoding.com</a>. 2018 - 2019</p>
- </footer>
+ </footer> -->
 
 </div>
 </body>

@@ -4,11 +4,8 @@
 
 @section('konten')
 
- 	<a href="/pegawai"> Kembali</a>
+ 	<a href="/pegawai" class="btn btn-secondary"> Kembali</a>
 	
-	<br/>
-	<br/>
- 
 	<form action="/pegawai/store" method="post" class="form-horizontal">
 		{{ csrf_field() }}
             <div class="form-group">
