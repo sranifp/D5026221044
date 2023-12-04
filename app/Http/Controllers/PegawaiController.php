@@ -53,7 +53,7 @@ class PegawaiController extends Controller
 	}
  
 	// method untuk edit data pegawai
-	public function editDatabase($id)
+	public function edit($id)
 	{
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();

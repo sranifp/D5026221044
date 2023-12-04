@@ -4,15 +4,20 @@
 
 @section('konten')
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Pegawai</h3>
+	<h2>Data Pegawai</h2>
 
 	<a href="/pegawai/tambah" class="btn btn-secondary"> + Tambah Pegawai Baru</a>
-	<p>Cari Data Pegawai :</p>
-   
+	<p style="margin-top: 3px;">Cari Data Pegawai :</p>
+   <!-- row supaya satu baris -->
 	<form action="/pegawai/cari" method="GET">
-        <input class="form-control" type="text" name="cari" placeholder="Cari Pegawai berdasarkan nama .." value="{{ old('cari') }}">
+		<div class="row">
+			<div class="col-sm-11">
+        	<input class="form-control" type="text" name="cari" placeholder="Cari Pegawai berdasarkan nama .." value="{{ old('cari') }}">
+	</div>
+		<div class="col-sm-1">
         <input class="btn btn-primary" type="submit" value="CARI">
+</div>
+</div>
     </form>
 
 	<table>
@@ -28,7 +33,15 @@
 		<tr>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
+			<td
+			@if($p->pegawai_umur <= 20)
+				class="bg-success text-white"
+			@elseif($p->pegawai_umur >= 20 && $p->pegawai_umur <= 30)
+				class="bg-warning text-danger"
+			@elseif($p->pegawai_umur >= 31)
+				class="bg-primary text-white"
+			@endif
+			>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
 				<a href="/pegawai/lihat/{{ $p->pegawai_id }}" class="btn btn-success">View</a>
