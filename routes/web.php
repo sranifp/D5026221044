@@ -86,5 +86,14 @@ Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
 Route::get('/pegawai/lihat/{id}','App\Http\Controllers\PegawaiController@viewPegawai');
-
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
+Route::get('/keyboard','App\Http\Controllers\KeyboardController@index');
+Route::get('/keyboard/edit/{id}','App\Http\Controllers\KeyboardController@edit');
+Route::post('/keyboard/update','App\Http\Controllers\KeyboardController@update');
+Route::get('/keyboard/tambah','App\Http\Controllers\KeyboardController@tambah');
+Route::post('/keyboard/store','App\Http\Controllers\KeyboardController@store');
+Route::get('/keyboard/hapus/{id}','App\Http\Controllers\KeyboardController@hapus');
+Route::get('/keyboard/lihat/{id}','App\Http\Controllers\KeyboardController@viewPegawai');
+Route::get('/keyboard/cari','App\Http\Controllers\KeyboardController@cari');
+
