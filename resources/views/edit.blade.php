@@ -9,7 +9,7 @@
 	@foreach($pegawai as $p)
 	<form action="/pegawai/update" method="post" class="form-horizontal">
 		{{ csrf_field() }}	
-    <input type="hidden" name="id" value="{{ $p->pegawai_nama }}"><br/>
+    <input type="hidden" name="id" value="{{ $p->pegawai_id }}"><br/>
     <!-- biar letaknya horizontal inget syntax bagian "form-group row" "class = "col-sm-1 col-form-label"  "class = "form-control"-->
     <!-- required="required" ini menyuruh harus diisi kalau ga maka gabisa disubmit -->
 		<div class="form-group row ">
