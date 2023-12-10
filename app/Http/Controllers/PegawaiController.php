@@ -21,10 +21,10 @@ class PegawaiController extends Controller
 	public function viewPegawai($id)
 	{
     	// mengambil data dari table pegawai
-		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+		$pegawai = DB::table('keyboard')->where('kodekeyboard',$id)->get();
  
     	// mengirim data pegawai ke view index
-		return view('lihat',['pegawai' => $pegawai]);
+		return view('lihatKeyboard',['keyboard' => $pegawai]);
  
 	}
  

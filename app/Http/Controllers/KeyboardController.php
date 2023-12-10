@@ -21,10 +21,10 @@ class KeyboardController extends Controller
 	public function viewPegawai($id)
 	{
     	// mengambil data dari table keyboard
-		$keyboard = DB::table('keyboard')->where('keyboard_id',$id)->get();
+		$keyboard = DB::table('keyboard')->where('kodekeyboard',$id)->get();
  
     	// mengirim data keyboard ke view index
-		return view('lihat',['keyboard' => $keyboard]);
+		return view('lihatKeyboard',['keyboard' => $keyboard]);
  
 	}
  
