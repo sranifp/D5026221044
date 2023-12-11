@@ -97,3 +97,8 @@ Route::get('/keyboard/hapus/{id}','App\Http\Controllers\KeyboardController@hapus
 Route::get('/keyboard/lihat/{id}','App\Http\Controllers\KeyboardController@viewPegawai');
 Route::get('/keyboard/cari','App\Http\Controllers\KeyboardController@cari');
 
+Route::get('/karyawan','App\Http\Controllers\karyawanController@index');
+Route::get('/karyawan/tambah','App\Http\Controllers\karyawanController@tambah');
+Route::post('/karyawan/store','App\Http\Controllers\karyawanController@store');
+Route::get('/karyawan/hapus/{id}','App\Http\Controllers\KaryawanController@hapus');
+Route::get('/karyawan/cari','App\Http\Controllers\KaryawanController@cari');

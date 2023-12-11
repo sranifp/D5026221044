@@ -19,23 +19,23 @@
 <body>
 <div class="container">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Sintiarani Febyan Putri_5026221044</a>
+       
+         <a class="navbar-brand" href="#">5026221044-Sintiarani Febyan Putri</a> 
 
-        <!-- Links -->
+        
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/karyawan">Karyawan</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link 2</a>
-          </li>
+          </li>  -->
 
           <!-- Dropdown -->
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
               Database
-            </a>
+            </a> -->
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/pegawai">Pegawai</a>
               <a class="dropdown-item" href="#">Link 2</a>
