@@ -14,10 +14,10 @@
             </div>
          </div>
          <div class = "form-group row">
-            <label for = "stok" class = "col-sm-2 col-form-label">Stok Keyboard</label>
+            <label for = "stockkeyboard" class = "col-sm-2 col-form-label">Stok Keyboard</label>
             <div class= "col-form-label">:</div>
             <div class = "col-sm-6">
-               <input name="stok" type = "text" class = "form-control" id = "stok" placeholder = "Masukkan Stok Keyboard">
+               <input name="stockkeyboard" type = "text" class = "form-control" id = "stockkeyboard" placeholder = "Masukkan Stok Keyboard">
             </div>
             </div>
             <a href="/keyboard" class="btn btn-danger"> Kembali</a>

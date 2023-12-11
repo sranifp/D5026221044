@@ -43,8 +43,8 @@ class KeyboardController extends Controller
 		// insert data ke table pegawai
 		DB::table('keyboard')->insert([
 			'merkkeyboard' => $request->nama,
-			'stockkeyboard' => $request->stok,
-			'tersedia' => $request->stok > 0 ? '1' : '0'
+			'stockkeyboard' => $request->stockkeyboard,
+			'tersedia' => $request->stockkeyboard > 0 ? '1' : '0',
 		]);
 		// alihkan halaman ke halaman pegawai
 		return redirect('/keyboard');
@@ -64,12 +64,12 @@ class KeyboardController extends Controller
 	// update data keyboard
 	public function update(Request $request)
 	{
-		// update data keyboard
-		DB::table('keyboard')->where('kodekeyboard',$request->id)->update([
-			'merkkeyboard' => $request->merkkeyboard,
-			'stockkeyboard' => $request->stockkeyboard,
-			'tersedia' => $request->Stok > 0 ? '1' : '0'
-			]);
+// update data keyboard
+	DB::table('keyboard')->where('kodekeyboard', $request->id)->update([
+    	'merkkeyboard' => $request->merkkeyboard,
+    	'stockkeyboard' => $request->stockkeyboard,
+    	'tersedia' => $request->stockkeyboard > 0 ? '1' : '0',
+	]);
 		// alihkan halaman ke halaman keyboard
 		return redirect('/keyboard');
 		//redirect melempar ke suatu url route keyboard, maka akan query all record 

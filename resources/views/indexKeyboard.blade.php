@@ -34,8 +34,12 @@
 			<td>{{ $p->merkkeyboard }}</td>
 			<td>{{ $p->stockkeyboard }}</td>
 			<td>			
-				<input class="form-check-input" type="checkbox" value="" {{ $p->tersedia === 'Y' ? 'checked' : '' }} id="flexCheckDefault">
-			</td>
+			<input class="form-check-input" 
+       type="checkbox" 
+       value="" 
+       {{ $p->tersedia === '1' && $p->stockkeyboard > 0 ? 'checked disabled' : '' }} 
+       id="flexCheckDefault">			
+	</td>
 			<td>
 				<a href="/keyboard/lihat/{{ $p->kodekeyboard }}" class="btn btn-success">View</a>
 				|
