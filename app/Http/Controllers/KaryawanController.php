@@ -48,6 +48,11 @@ class KaryawanController extends Controller
 	// 	return view('editKeyboard',['karyawan' => $karyawan]);
 	public function store(Request $request)
 	{
+		//error handling
+        $this->validate($request, [
+            'kodepegawai'=>'unique:karyawan,kodepegawai',
+        ]);
+
 		// insert data ke table pegawai
 		DB::table('karyawan')->insert([
 			'kodepegawai' => $request->kode,

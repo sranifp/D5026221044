@@ -6,13 +6,15 @@
 
 	<form action="/karyawan/store" method="post" class="form-horizontal">
 		{{ csrf_field() }}
-         <div class = "form-group row">
-            <label for = "kode" class = "col-sm-2 col-form-label">Kode Karyawan</label>
-            <div class= "col-form-label">:</div>
-            <div class = "col-sm-6">
-               <input name="kode" type = "text" class = "form-control" id = "kode" placeholder = "Masukkan Kode karyawan">
-            </div>
-         </div>
+      <div class = "form-group row">
+        <label for = "kode" class = "col-sm-2 control-label">Kode Pegawai</label>
+        <div class = "col-sm-6" {{ $errors->get('studentname') ? 'has-error' : '' }}>
+            <input id="kode" name="kode" type = "text" class = "form-control" id = "kode" placeholder = "Masukkan Kode Pegawai">
+            @foreach($errors->get('kodepegawai') as $error)
+            <span class="help-block">{{ $error }}</span>
+            @endforeach
+        </div>
+    </div>
          <div class = "form-group row">
             <label for = "nama" class = "col-sm-2 col-form-label">Nama Lengkap</label>
             <div class= "col-form-label">:</div>
